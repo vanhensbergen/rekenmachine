@@ -22,13 +22,10 @@ namespace rekenmachine
     /// </summary>
     public partial class MainWindow : Window, IContentLeverancier
     {
-
-        public RekenController Controller;
-       
         public MainWindow()
         {
             InitializeComponent();
-            Controller = new RekenController(this);
+            _ = new RekenController(this);
         }
 
         public string ActionParameter(object sender)
