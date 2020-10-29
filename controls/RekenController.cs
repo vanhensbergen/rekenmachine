@@ -37,7 +37,7 @@ namespace rekenmachine.controls
                         View.SetResultText(Result);
                         break;
                     case "keer":
-                        Result = Model.vermenigvuldig();
+                        Result = Model.Vermenigvuldig();
                         View.SetResultText(Result);
                         break;
 

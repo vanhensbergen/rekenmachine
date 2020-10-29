@@ -28,7 +28,7 @@ namespace rekenmachine.models
         {
             return Getal1 - Getal2;
         }
-        public int vermenigvuldig()
+        public int Vermenigvuldig()
         {
             return Getal1 * Getal2;
         }
