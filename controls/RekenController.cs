@@ -18,19 +18,32 @@ namespace rekenmachine.controls
         {
             Model = new Rekenaar();
             View = view;
-            View.AddClickHandler(Button_Click_To_Add);
+            View.AddClickHandler(Button_Click);
 
         }
 
-        private void Button_Click_To_Add(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
             bool test1 = Model.IsGetal1(View.GetGetal1Text());
             bool test2 = Model.IsGetal2(View.GetGetal2Text());
             if (test1 && test2)
             {
+                string bewerking = View.ActionParameter(sender);
+                
+                switch (bewerking)
+                {
+                    case "plus":
+                        int Result = Model.TelOp();
+                        View.SetResultText(Result);
+                        break;
+                    case "keer":
+                        Result = Model.vermenigvuldig();
+                        View.SetResultText(Result);
+                        break;
 
-                int Optelling = Model.TelOp();
-                View.SetResultText(Optelling);
+                }
+                
+               
             }
             
         }

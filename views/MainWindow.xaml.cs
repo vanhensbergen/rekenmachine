@@ -30,6 +30,13 @@ namespace rekenmachine
             InitializeComponent();
             Controller = new RekenController(this);
         }
+
+        public string ActionParameter(object sender)
+        {
+            Button knop = sender as Button;
+            return (string)knop.Tag;
+        }
+
         public void AddClickHandler(RoutedEventHandler handler)
         {
             TelOpKnop.Click += handler;
