@@ -48,21 +48,6 @@ namespace rekenmachine
         {
             Result.Text = value.ToString();
         }
-
-        private void Button_Click_To_Add(object sender, RoutedEventArgs e)
-        {
-            bool test1 = int.TryParse(Getal1.Text, result: out int getal1);
-            bool test2 = int.TryParse(Getal2.Text, result: out int getal2);
-            if (test1 && test2)
-            {
-                int result = getal1 + getal2;
-                Result.Text =  result.ToString();
-            }
-            else
-            {
-
-            }
-        }
         
     }
 }

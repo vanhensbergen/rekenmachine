@@ -22,6 +22,6 @@
         <TextBox Background="AliceBlue" Grid.Column="0" Grid.Row="1" x:Name="Getal1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MaxLength="3"/>
         <TextBox Background="AliceBlue" Grid.Column="2" Grid.Row="1" x:Name="Getal2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MaxLength="3"/>
         <TextBox Background="AliceBlue" Grid.Column="1" Grid.Row="3" x:Name="Result" IsReadOnly="true" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" MaxLength="3"/>
-        <Button Content="tel op" Background="BLUE" Grid.Row="1" Grid.Column="1" x:Name="TelOpKnop"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  />
+        <Button Content="tel op" Tag="plus" Background="BLUE" Grid.Row="1" Grid.Column="1" x:Name="TelOpKnop"  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"  />
     </Grid>
 </Window>
