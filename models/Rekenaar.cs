@@ -21,7 +21,7 @@ namespace rekenmachine.models
         }
         public bool IsGetal2(string txt)
         {
-            return int.TryParse(txt, out Getal1);
+            return int.TryParse(txt, out Getal2);
         }
 
         public int TrekAf()

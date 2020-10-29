@@ -12,22 +12,42 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using rekenmachine.controls;
+using rekenmachine.views;
 
 namespace rekenmachine
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
-    {\
+    public partial class MainWindow : Window, IContentLeverancier
+    {
 
+        public RekenController Controller;
        
         public MainWindow()
         {
             InitializeComponent();
+            Controller = new RekenController(this);
+        }
+        public void AddClickHandler(RoutedEventHandler handler)
+        {
+            TelOpKnop.Click += handler;
         }
 
-       
+        public string GetGetal1Text()
+        {
+            return Getal1.Text;
+        }
+        public string GetGetal2Text()
+        {
+            return Getal2.Text;
+        }
+
+        public void SetResultText(int value)
+        {
+            Result.Text = value.ToString();
+        }
 
         private void Button_Click_To_Add(object sender, RoutedEventArgs e)
         {
