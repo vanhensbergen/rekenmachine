@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="rekenmachine.MainWindow" BaseTypeListCollapsed="true">
-    <Position X="0.5" Y="4" Width="1.5" />
+    <Position X="0.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAACAEAAAAAAAAAAAAAQAAAAAAAAAAAAAEAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAQAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>views\MainWindow.xaml.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
+    <Lollipop Position="0.575" />
   </Class>
   <Class Name="rekenmachine.controls.RekenController">
     <Position X="4.5" Y="0.75" Width="1.5" />
@@ -22,15 +22,16 @@
   <Class Name="rekenmachine.models.Rekenaar">
     <Position X="8" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAAAAQAAIAAAAAABAEAAAAIAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAKAAAAQQAgAAASAAAAEAIAQAAACI=</HashCode>
       <FileName>models\Rekenaar.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
-  <Interface Name="rekenmachine.views.IContentLeverancier">
-    <Position X="0.5" Y="1.75" Width="1.5" />
+  <Interface Name="rekenmachine.views.IRekenView">
+    <Position X="0.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAACAEAAAAAAAAAAAAAQAAAAAAAAAAAAAEAAAA=</HashCode>
-      <FileName>views\IContentLeverancier.cs</FileName>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAQAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>views\IRekenView.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

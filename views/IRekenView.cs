@@ -7,13 +7,11 @@ using System.Windows;
 
 namespace rekenmachine.views
 {
-    public interface IContentLeverancier
+    public interface IRekenView
     {
         string GetGetal1Text();
         string GetGetal2Text();
-        void SetResultText( int value);
         void AddClickHandler(RoutedEventHandler handler);
-
         string ActionParameter(Object sender);
     }
 }

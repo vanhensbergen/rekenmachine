@@ -1,36 +1,83 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace rekenmachine.models
 {
-    class Rekenaar
+    public class Rekenaar:INotifyPropertyChanged
     {
-        private int Getal1;
-        private int Getal2;
-        public int TelOp()
+        private int _Getal1;
+        private int _Getal2;
+        private int _Result;
+
+        public int Result
         {
-            return Getal1 + Getal2;
+            get => _Result;
+            set
+            {
+                _Result = value;
+                OnPropertyChanged("Result");
+            }
         }
 
-        public bool IsGetal1(string txt)
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void OnPropertyChanged(string propertyname)
         {
-            return int.TryParse(txt, out Getal1);
-        }
-        public bool IsGetal2(string txt)
-        {
-            return int.TryParse(txt, out Getal2);
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyname));
         }
 
-        public int TrekAf()
+        private void TelOp()
         {
-            return Getal1 - Getal2;
+            Result = _Getal1 + _Getal2;
         }
-        public int Vermenigvuldig()
+
+        public bool SetGetal1(string txt)
         {
-            return Getal1 * Getal2;
+            return int.TryParse(txt, out _Getal1);
+        }
+
+        internal void Bereken(string bewerking)
+        {
+            switch (bewerking)
+            {
+                case "+":
+                    TelOp();
+                    break;
+                case "-":
+                    TrekAf();
+                    break;
+                case "x":
+                    Vermenigvuldig();
+                    break;
+                case ":":
+                    Deel();
+                    break;
+                default:
+                    throw new NotImplementedException(bewerking);
+            }
+        }
+
+        private void Deel()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool SetGetal2(string txt)
+        {
+            return int.TryParse(txt, out _Getal2);
+        }
+
+        private void TrekAf()
+        {
+            Result = _Getal1 - _Getal2;
+        }
+        private void Vermenigvuldig()
+        {
+            Result = _Getal1 * _Getal2;
         }
     }
 }
