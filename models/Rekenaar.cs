@@ -16,11 +16,7 @@ namespace rekenmachine.models
         public int Result
         {
             get => _Result;
-            set
-            {
-                _Result = value;
-                OnPropertyChanged("Result");
-            }
+            set { _Result = value; OnPropertyChanged("Result"); }
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
