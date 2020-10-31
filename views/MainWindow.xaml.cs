@@ -16,7 +16,7 @@ namespace rekenmachine
             InitializeComponent();
             Rekenaar Model = new Rekenaar();
             _ = new RekenController(this, Model);
-            DataContext = Model;
+            SetDataSource(Model);
         }
 
         public string ActionParameter(object sender)
@@ -41,6 +41,11 @@ namespace rekenmachine
         public string GetGetal2Text()
         {
             return Getal2.Text;
+        }
+
+        public void SetDataSource(object source)
+        {
+            DataContext = source;
         }
     }
 }

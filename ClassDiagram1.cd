@@ -3,7 +3,7 @@
   <Class Name="rekenmachine.MainWindow" BaseTypeListCollapsed="true">
     <Position X="0.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAQAAAAAAAAAAAAAEAAAA=</HashCode>
+      <HashCode>CAAAAAAAAAEAAAAAAAAAAAAAQAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>views\MainWindow.xaml.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.575" />
@@ -20,9 +20,9 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="rekenmachine.models.Rekenaar">
-    <Position X="8" Y="0.5" Width="1.5" />
+    <Position X="8" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAKAAAAQQAgAAASAAAAEAIAQAAACI=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAKAAAAAQAgAAASAAAAAAAAAAAACI=</HashCode>
       <FileName>models\Rekenaar.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -30,7 +30,7 @@
   <Interface Name="rekenmachine.views.IRekenView">
     <Position X="0.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAAQAAAAAAAAAAAAAEAAAA=</HashCode>
+      <HashCode>CAAAAAAAAAEAAAAAAAAAAAAAQAAAAAAAAAAAAAEAAAA=</HashCode>
       <FileName>views\IRekenView.cs</FileName>
     </TypeIdentifier>
   </Interface>

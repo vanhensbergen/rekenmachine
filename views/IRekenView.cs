@@ -13,5 +13,6 @@ namespace rekenmachine.views
         string GetGetal2Text();
         void AddClickHandler(RoutedEventHandler handler);
         string ActionParameter(Object sender);
+        void SetDataSource(object source);
     }
 }
