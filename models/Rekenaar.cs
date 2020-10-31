@@ -43,7 +43,7 @@ namespace rekenmachine.models
                     Result = _Getal1 + _Getal2;
                     break;
                 case "-":
-                    Result = _Getal1 / _Getal2;
+                    Result = _Getal1 - _Getal2;
                     break;
                 case "x":
                     Result = _Getal1 * _Getal2;

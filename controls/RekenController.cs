@@ -10,7 +10,7 @@ using rekenmachine.views;
 
 namespace rekenmachine.controls
 {
-    public class RekenController
+    public class RekenController: IViewListener
     {
         private readonly Rekenaar Model;
         private readonly IRekenView View;
@@ -18,11 +18,9 @@ namespace rekenmachine.controls
         {
             this.Model = Model;
             View = view;
-            View.AddClickHandler(Button_Click);
-
         }
-        
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        public void OnActionPerformed(object sender, RoutedEventArgs e)
         {
             bool test1 = Model.SetGetal1(View.GetGetal1Text());
             bool test2 = Model.SetGetal2(View.GetGetal2Text());
@@ -30,10 +28,10 @@ namespace rekenmachine.controls
             {
                 string bewerking = View.ActionParameter(sender);
                 Model.Bereken(bewerking);
-                
-               
+
+
             }
-            
         }
+
     }
 }

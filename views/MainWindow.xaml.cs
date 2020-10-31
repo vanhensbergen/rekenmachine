@@ -15,7 +15,7 @@ namespace rekenmachine
         {
             InitializeComponent();
             Rekenaar Model = new Rekenaar();
-            _ = new RekenController(this, Model);
+            SetClickListener(new RekenController(this, Model));
             SetDataSource(Model);
         }
 
@@ -23,15 +23,6 @@ namespace rekenmachine
         {
             Button knop = sender as Button;
             return (string)knop.Tag;
-        }
-
-        public void AddClickHandler(RoutedEventHandler handler)
-        {
-            TelOpKnop.Click += handler;
-            TrekAfKnop.Click += handler;
-            KeerKnop.Click += handler;
-            DeelKnop.Click += handler;
-
         }
 
         public string GetGetal1Text()
@@ -46,6 +37,14 @@ namespace rekenmachine
         public void SetDataSource(object source)
         {
             DataContext = source;
+        }
+
+        public void SetClickListener(IViewListener control)
+        {
+            TelOpKnop.Click += control.OnActionPerformed;
+            TrekAfKnop.Click += control.OnActionPerformed;
+            KeerKnop.Click += control.OnActionPerformed;
+            DeelKnop.Click += control.OnActionPerformed;
         }
     }
 }
